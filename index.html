@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,137 +6,169 @@
   <title>Cravery Cafe | Where Cravings Meet Comfort</title>
   <style>
     :root {
-      --bg-deep-black: #0b0b0c;
-      --bg-card-dark: #131315;
-      --warm-accent: #d4a373; /* Premium aesthetic warm coffee tone */
-      --text-pure-white: #ffffff;
-      --text-muted-gray: #a1a1aa;
+      --bg-midnight: #09090b;
+      --bg-panel-dark: #121214;
+      --bg-panel-light: #f4f4f5;
+      --accent-gold: #c69b7b;
+      --text-main: #ffffff;
+      --text-dark: #18181b;
+      --text-muted: #a1a1aa;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Playfair Display', 'Segoe UI', serif;
     }
 
     body {
-      background-color: var(--bg-deep-black);
-      color: var(--text-pure-white);
-      line-height: 1.6;
+      background-color: var(--bg-midnight);
+      color: var(--text-main);
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
     header {
-      background: rgba(11, 11, 12, 0.95);
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 30px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #222225;
-      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
-    .brand-logo h1 {
-      font-size: 22px;
+    .logo h1 {
+      font-size: 24px;
       font-weight: 800;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       text-transform: uppercase;
     }
 
-    .brand-logo span {
-      color: var(--warm-accent);
+    .logo span {
+      color: var(--accent-gold);
     }
 
-    .nav-cta {
-      background: var(--warm-accent);
-      color: #000000;
-      padding: 10px 22px;
+    .nav-btn {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--accent-gold);
+      padding: 12px 28px;
       text-decoration: none;
-      border-radius: 50px;
+      border-radius: 0;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
       font-weight: 700;
-      font-size: 14px;
-      transition: transform 0.2s;
+      transition: all 0.3s ease;
     }
 
-    /* Split Screen Hero Layout */
-    .hero-container {
-      max-width: 1200px;
+    .nav-btn:hover {
+      background: var(--accent-gold);
+      color: var(--bg-midnight);
+    }
+
+    /* True Desktop Grid Layout Container */
+    .hero-section {
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 60px 20px;
-      min-height: 75vh;
-      display: flex;
-      flex-direction: column;
+      padding: 80px 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
       align-items: center;
-      justify-content: center;
-      gap: 40px;
-      border-bottom: 1px solid #222225;
     }
 
-    .hero-text-content {
+    .hero-content {
       text-align: center;
-      max-width: 800px;
     }
 
     .hero-tag {
-      display: inline-block;
-      background: rgba(212, 163, 115, 0.1);
-      color: var(--warm-accent);
-      padding: 6px 18px;
-      border-radius: 50px;
-      font-size: 13px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--accent-gold);
+      margin-bottom: 20px;
+      display: block;
       font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      border: 1px solid rgba(212, 163, 115, 0.2);
     }
 
-    .hero-container h2 {
-      font-size: 42px;
+    .hero-content h2 {
+      font-size: 48px;
       font-weight: 900;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .hero-container h2 span {
-      color: var(--warm-accent);
-    }
-
-    .hero-container p {
-      color: var(--text-muted-gray);
-      font-size: 16px;
-      margin-bottom: 35px;
-    }
-
-    .hero-action-btn {
-      background: var(--warm-accent);
-      color: #000000;
-      padding: 16px 36px;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 25px;
       text-transform: uppercase;
-      font-size: 15px;
-      box-shadow: 0 10px 25px rgba(212, 163, 115, 0.15);
+      letter-spacing: -1px;
     }
 
-    /* Animated 1:1 Aspect Frame */
-    .slideshow-frame {
+    .hero-content h2 span {
+      display: block;
+      color: var(--accent-gold);
+      font-style: italic;
+      font-family: serif;
+      text-transform: capitalize;
+      letter-spacing: 0;
+    }
+
+    .hero-content p {
+      color: var(--text-muted);
+      font-size: 16px;
+      font-family: 'Segoe UI', sans-serif;
+      max-width: 500px;
+      margin: 0 auto 40px auto;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      background: var(--accent-gold);
+      color: var(--bg-midnight);
+      padding: 18px 40px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: 13px;
+      transition: opacity 0.3s;
+    }
+
+    /* Premium Dynamic Image Frame with Modern Border Accents */
+    .hero-display {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .frame-wrapper {
       position: relative;
       width: 100%;
-      max-width: 340px;
-      aspect-ratio: 1 / 1;
-      background: var(--bg-card-dark);
-      border: 1px solid #222225;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      max-width: 440px;
+      aspect-ratio: 4 / 5;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 15px;
+      background: #0e0e10;
     }
 
-    .slideshow-frame img {
+    .frame-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 40px;
+      height: 40px;
+      border-top: 2px solid var(--accent-gold);
+      border-left: 2px solid var(--accent-gold);
+    }
+
+    .slideshow-box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .slideshow-box img {
       position: absolute;
       top: 0;
       left: 0;
@@ -147,393 +179,406 @@
       transition: opacity 0.8s ease-in-out;
     }
 
-    .slideshow-frame img.active {
+    .slideshow-box img.active {
       opacity: 1;
     }
 
-    /* Signature Highlights Grid Menu Section */
-    .menu-highlights {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
+    /* Elegant Asymmetrical Grid Sections */
+    .menu-section {
+      background: var(--bg-panel-light);
+      color: var(--text-dark);
+      padding: 100px 20px;
     }
 
-    .section-title {
-      font-size: 32px;
-      font-weight: 800;
+    .menu-container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h3 {
+      font-size: 36px;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      font-weight: 900;
       letter-spacing: 1px;
     }
 
-    .section-title span {
-      color: var(--warm-accent);
-    }
-
-    .section-subtitle {
-      color: var(--text-muted-gray);
+    .section-header p {
+      font-family: 'Segoe UI', sans-serif;
+      color: #71717a;
       font-size: 15px;
-      margin-bottom: 50px;
-    }
-
-    .highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .menu-card {
-      background: var(--bg-card-dark);
-      border: 1px solid #222225;
-      border-radius: 20px;
-      overflow: hidden;
-      text-align: left;
-      transition: border-color 0.3s;
-    }
-
-    .menu-card:hover {
-      border-color: var(--warm-accent);
-    }
-
-    .menu-card-img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-bottom: 1px solid #222225;
-    }
-
-    .menu-card-body {
-      padding: 25px;
-    }
-
-    .menu-card h4 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .menu-card p {
-      color: var(--text-muted-gray);
-      font-size: 14px;
-    }
-
-    /* Booking Frame Module */
-    .reservation-section {
-      padding: 80px 20px;
-      background: #111112;
-      border-top: 1px solid #222225;
-      border-bottom: 1px solid #222225;
-    }
-
-    .form-wrapper {
-      max-width: 500px;
-      margin: 0 auto;
-      background: var(--bg-card-dark);
-      padding: 40px 30px;
-      border-radius: 24px;
-      border: 1px solid #222225;
-    }
-
-    .form-wrapper h3 {
-      font-size: 24px;
-      font-weight: 800;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .input-row {
-      margin-bottom: 20px;
-    }
-
-    .input-row label {
-      display: block;
-      font-size: 12px;
-      text-transform: uppercase;
-      color: var(--text-muted-gray);
-      margin-bottom: 8px;
-      font-weight: 700;
-    }
-
-    .input-row input, .input-row select {
-      width: 100%;
-      background: #19191b;
-      border: 1px solid #2d2d31;
-      padding: 12px 16px;
-      border-radius: 10px;
-      color: white;
-      font-size: 15px;
-    }
-
-    .submit-button {
-      width: 100%;
-      background: var(--warm-accent);
-      color: #000000;
-      border: none;
-      padding: 15px;
-      font-size: 16px;
-      font-weight: 800;
-      text-transform: uppercase;
-      border-radius: 10px;
-      cursor: pointer;
       margin-top: 10px;
     }
 
-    /* Google Reviews Screenshot Slider Component */
-    .testimonials-section {
-      padding: 80px 20px;
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .rating-summary {
-      color: var(--warm-accent);
-      font-weight: 700;
-      margin-bottom: 40px;
-      font-size: 15px;
-    }
-
-    .review-display-box {
-      background: var(--bg-card-dark);
-      border-radius: 20px;
-      border: 1px solid #222225;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 250px;
-    }
-
-    .review-node {
-      display: none;
-      width: 100%;
-      padding: 15px;
-    }
-
-    .review-node.visible {
-      display: block;
-    }
-
-    .review-node img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    footer {
-      background: var(--bg-deep-black);
-      border-top: 1px solid #222225;
-      padding: 60px 20px;
-    }
-
-    .footer-layout {
-      max-width: 1100px;
-      margin: 0 auto;
+    .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 40px;
     }
 
-    .meta-details h4 {
-      font-size: 20px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
+    .premium-card {
+      background: #ffffff;
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
     }
 
-    .meta-details p {
-      color: var(--text-muted-gray);
-      font-size: 14px;
+    .premium-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card-img-box {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .card-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-info {
+      padding: 30px;
+    }
+
+    .card-info h4 {
+      font-size: 22px;
+      font-weight: 800;
       margin-bottom: 12px;
+      letter-spacing: -0.5px;
     }
 
-    /* Desktop Wide Screen Adaptations */
+    .card-info p {
+      font-family: 'Segoe UI', sans-serif;
+      color: #52525b;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Premium Styled Form Module */
+    .form-section {
+      padding: 100px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .booking-box {
+      background: var(--bg-panel-dark);
+      border: 1px solid #222225;
+      padding: 50px 40px;
+    }
+
+    .booking-box h3 {
+      font-size: 28px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 35px;
+      letter-spacing: 1px;
+    }
+
+    .input-field {
+      margin-bottom: 25px;
+    }
+
+    .input-field label {
+      display: block;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-gold);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .input-field input, .input-field select {
+      width: 100%;
+      background: #1a1a1c;
+      border: 1px solid #2d2d32;
+      padding: 14px 18px;
+      color: #ffffff;
+      font-size: 14px;
+      font-family: 'Segoe UI', sans-serif;
+      outline: none;
+    }
+
+    .form-btn {
+      width: 100%;
+      background: var(--accent-gold);
+      color: var(--bg-midnight);
+      border: none;
+      padding: 18px;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    /* Premium Real Google Review Image Carousel Display */
+    .reviews-section {
+      padding: 100px 20px;
+      text-align: center;
+      border-top: 1px solid #222225;
+    }
+
+    .reviews-container {
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    .review-viewport {
+      background: var(--bg-panel-dark);
+      border: 1px solid #222225;
+      border-radius: 12px;
+      overflow: hidden;
+      min-height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .review-slide {
+      display: none;
+      width: 100%;
+    }
+
+    .review-slide.visible {
+      display: block;
+    }
+
+    .review-slide img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    footer {
+      background: #050506;
+      padding: 60px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      border-top: 1px solid #222225;
+    }
+
+    .footer-content {
+      max-width: 1300px;
+      margin: 0 auto;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* Premium Multi-Device Desktop Monitor Adjustments Media Query */
     @media (min-width: 992px) {
-      .hero-container {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 80px 0;
+      .hero-section {
+        grid-template-columns: 1.2fr 1fr; /* Two columns side-by-side on computers */
+        padding: 120px 20px;
       }
-      .hero-text-content {
+      .hero-content {
         text-align: left;
-        max-width: 600px;
       }
-      .slideshow-frame {
-        max-width: 420px;
+      .hero-content h2 {
+        font-size: 64px;
       }
-    }
-
-    @media (max-width: 768px) {
-      .hero-container h2 { font-size: 32px; }
-      .menu-highlights { padding: 50px 10px; }
-      .slideshow-frame { max-width: 290px; }
+      .hero-content p {
+        margin: 0 0 40px 0;
+      }
+      .frame-wrapper {
+        max-width: 460px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="brand-logo">
+    <div class="logo">
       <h1>Cravery <span>Cafe</span></h1>
     </div>
-    <a href="#reserve" class="nav-cta">Book Table</a>
+    <a href="#reserve" class="nav-btn">Book Table</a>
   </header>
 
-  <section class="hero-container">
-    <div class="hero-text-content">
-      <div class="hero-tag">Jubilee Hills & Financial District</div>
+  <section class="hero-section">
+    <div class="hero-content">
+      <span class="hero-tag">Premium Comfort Hub</span>
       <h2>Where Cravings Meet <span>Cozy Comfort</span></h2>
       <p>Indulge in a peaceful, aesthetic ambiance featuring premium brewed coffees, legendary mac and cheese, and artisan comfort savory creations.</p>
-      <a href="#reserve" class="hero-action-btn">Reserve a Space</a>
+      <a href="#reserve" class="hero-cta">Reserve a Space</a>
     </div>
 
-    <!-- Active Slideshow Crossfade Frame -->
-    <div class="slideshow-frame" id="cafeSlideshow">
-      <img src="item1.jpg" class="active" alt="Delicious Mac and Cheese">
-      <img src="item2.jpg" alt="Pulled Cheese Garlic Bread">
-      <img src="item3.jpg" alt="Premium Rich Hot Chocolate">
-      <img src="item4.jpg" alt="Cozy Cafe Interior Ambiance">
-    </div>
-  </section>
-
-  <!-- Best-Sellers Visual Grid Module -->
-  <section class="menu-highlights">
-    <h3 class="section-title">Signature <span>Best-Sellers</span></h3>
-    <p class="section-subtitle"> A curated preview of our diners' absolute favorite delicacies</p>
-    
-    <div class="highlight-grid">
-      <div class="menu-card">
-        <img src="item1.jpg" class="menu-card-img" alt="Mac and Cheese">
-        <div class="menu-card-body">
-          <h4>Gourmet Mac & Cheese</h4>
-          <p>Ultra-creamy, multi-cheese baked macaroni topped with a crisp golden herb crust. Pure comfort in every single forkful.</p>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <img src="item2.jpg" class="menu-card-img" alt="Garlic Bread">
-        <div class="menu-card-body">
-          <h4>Pulled Cheese Garlic Bread</h4>
-          <p>Artisanal baked sourdough loaded with freshly minced garlic butter, loaded high with interactive melted pulled mozzarella.</p>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <img src="item3.jpg" class="menu-card-img" alt="Hot Chocolate">
-        <div class="menu-card-body">
-          <h4>Signature Hot Chocolate</h4>
-          <p>Rich Belgian chocolate melted slowly with premium whipped cream, topped with flame-toasted artisan vanilla marshmallows.</p>
+    <div class="hero-display">
+      <div class="frame-wrapper">
+        <div class="slideshow-box" id="cafeSlides">
+          <img src="item1.jpg" class="active" alt="Mac and Cheese">
+          <img src="item2.jpg" alt="Pulled Cheese Garlic Bread">
+          <img src="item3.jpg" alt="Rich Hot Chocolate">
+          <img src="item4.jpg" alt="Steaming Cafe Vibe">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Table Booking Form Redirects straight to WhatsApp -->
-  <section class="reservation-section" id="reserve">
-    <div class="form-wrapper">
+  <section class="menu-section">
+    <div class="menu-container">
+      <div class="section-header">
+        <h3>Signature Best-Sellers</h3>
+        <p>A curated preview of our diners' absolute favorite delicacies</p>
+      </div>
+      
+      <div class="menu-grid">
+        <div class="premium-card">
+          <div class="card-img-box">
+            <img src="item1.jpg" alt="Gourmet Mac and Cheese">
+          </div>
+          <div class="card-info">
+            <h4>Gourmet Mac & Cheese</h4>
+            <p>Ultra-creamy, multi-cheese baked macaroni topped with a crisp golden herb crust. Pure comfort in every single forkful.</p>
+          </div>
+        </div>
+
+        <div class="premium-card">
+          <div class="card-img-box">
+            <img src="item2.jpg" alt="Garlic Bread">
+          </div>
+          <div class="card-info">
+            <h4>Pulled Cheese Garlic Bread</h4>
+            <p>Artisanal baked sourdough loaded with freshly minced garlic butter, loaded high with interactive melted pulled mozzarella.</p>
+          </div>
+        </div>
+
+        <div class="premium-card">
+          <div class="card-img-box">
+            <img src="item3.jpg" alt="Belgian Hot Chocolate">
+          </div>
+          <div class="card-info">
+            <h4>Signature Hot Chocolate</h4>
+            <p>Rich Belgian chocolate melted slowly with premium whipped cream, topped with flame-toasted artisan vanilla marshmallows.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="reserve">
+    <div class="booking-box">
       <h3>Book An Aesthetic Table</h3>
-      <form id="bookingForm">
-        <div class="input-row">
-          <label for="guestName">Full Name</label>
-          <input type="text" id="guestName" required placeholder="Enter your full name">
+      <form id="bookingDataForm">
+        <div class="input-field">
+          <label for="nameInput">Full Name</label>
+          <input type="text" id="nameInput" required placeholder="Enter your full name">
         </div>
-        <div class="input-row">
-          <label for="guestCount">Number of Guests</label>
-          <select id="guestCount">
+        <div class="input-field">
+          <label for="countInput">Number of Guests</label>
+          <select id="countInput">
             <option value="2 People">2 People (Cozy Corner)</option>
             <option value="4 People">4 People (Standard Table)</option>
             <option value="6+ People">6+ People (Group Celebration)</option>
           </select>
         </div>
-        <div class="input-row">
-          <label for="cafeLocation">Preferred Outlet Location</label>
-          <select id="cafeLocation">
+        <div class="input-field">
+          <label for="locInput">Preferred Outlet Location</label>
+          <select id="locInput">
             <option value="Jubilee Hills">Jubilee Hills, Road No. 78</option>
             <option value="Financial District">Financial District, Nanakramguda</option>
           </select>
         </div>
-        <button type="submit" class="submit-button">Request Table via WhatsApp</button>
+        <button type="submit" class="form-btn">Request Table via WhatsApp</button>
       </form>
     </div>
   </section>
 
-  <!-- Live Verified Google Reviews Image Carousel Module -->
-  <section class="testimonials-section">
-    <h3 class="section-title">Loved By Diners</h3>
-    <div class="rating-summary">★ 4.5 Stars (2,380+ Real Verified Google Reviews)</div>
-    
-    <div class="review-display-box">
-      <div class="review-node visible">
-        <img src="review-mahima.png" alt="Mahima Nahata Google Review">
+  <section class="reviews-section">
+    <div class="reviews-container">
+      <div class="section-header">
+        <h3>Loved By Diners</h3>
+        <p class="rating-summary" style="color: var(--accent-gold);">★ 4.5 Stars (2,380+ Verified Google Reviews)</p>
       </div>
-      <div class="review-node">
-        <img src="review-shireen.png" alt="Shireen Ahsan Google Review">
-      </div>
-      <div class="review-node">
-        <img src="review-pooja.png" alt="Pooja R Google Review">
-      </div>
-      <div class="review-node">
-        <img src="review-badal.png" alt="Badal Swain Google Review">
-      </div>
-      <div class="review-node">
-        <img src="review-sayali.png" alt="Sayali Save Google Review">
-      </div>
-      <div class="review-node">
-        <img src="review-avisek.png" alt="Avisek Das Google Review">
+
+      <div class="review-viewport">
+        <div class="review-slide visible">
+          <img src="review-mahima.png" alt="Mahima Review Screenshot">
+        </div>
+        <div class="review-slide">
+          <img src="review-shireen.png" alt="Shireen Review Screenshot">
+        </div>
+        <div class="review-slide">
+          <img src="review-pooja.png" alt="Pooja Review Screenshot">
+        </div>
+        <div class="review-slide">
+          <img src="review-badal.png" alt="Badal Review Screenshot">
+        </div>
+        <div class="review-slide">
+          <img src="review-sayali.png" alt="Sayali Review Screenshot">
+        </div>
+        <div class="review-slide">
+          <img src="review-avisek.png" alt="Avisek Review Screenshot">
+        </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="footer-layout">
-      <div class="meta-details">
-        <h4>Cravery Cafe Hyderabad</h4>
-        <p>📍 Jubilee Hills: Plot 416A, Film Nagar, Phase III, Road No. 78, Hyderabad</p>
-        <p>📍 Financial District: Level-1, The District, Mescape Road, Nanakramguda, Hyderabad</p>
-        <p>⏰ Timing: Open Daily from 11:00 AM to 1:00 AM Midnight</p>
-      </div>
+    <div class="footer-content">
+      <p style="font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Cravery Cafe Hyderabad</p>
+      <p>📍 Jubilee Hills: Plot 416A, Film Nagar, Phase III, Road No. 78, Hyderabad</p>
+      <p>📍 Financial District: Level-1, The District, Mescape Road, Nanakramguda, Hyderabad</p>
+      <p style="margin-top: 15px;">⏰ Timing: Open Daily from 11:00 AM to 1:00 AM Midnight</p>
     </div>
   </footer>
 
   <script>
-    // Front Page Image Crossfader Loop - ACTIVE AT 3 SECONDS (3000ms)
-    let cafeIndex = 0;
-    const cafeImages = document.querySelectorAll('#cafeSlideshow img');
-
-    function rotateCafeImages() {
-      if(cafeImages.length > 0) {
-        cafeImages[cafeIndex].classList.remove('active');
+    // Food Asset Rotator Engine - Configured to 3 Seconds (3000ms)
+    let imgIdx = 0;
+    const images = document.querySelectorAll('#cafeSlideshow img');
+    function slideImages() {
+      if(images.length > 0) {
+        images[cafeIndex].classList.remove('active');
         cafeIndex = (cafeIndex + 1) % cafeImages.length;
-        cafeImages[cafeIndex].classList.add('active');
+        cafeImages[cafeIndex].add ? cafeImages[cafeIndex].classList.add('active') : cafeImages[cafeIndex].classList.add('active');
       }
     }
-    setInterval(rotateCafeImages, 3000);
-
-    // Google Review Image Screenshot Cycler Engine - ACTIVE AT 5 SECONDS (5000ms)
-    let reviewIndex = 0;
-    const reviewNodes = document.querySelectorAll('.review-node');
-
-    function cycleReviews() {
-      if(reviewNodes.length > 0) {
-        reviewNodes[reviewIndex].classList.remove('visible');
-        reviewIndex = (reviewIndex + 1) % reviewNodes.length;
-        reviewNodes[reviewIndex].classList.add('visible');
+    // Fixed reference naming bugs
+    let imgCounter = 0;
+    const imgSlides = document.querySelectorAll('#cafeSlides img');
+    setInterval(() => {
+      if(imgSlides.length > 0) {
+        imgSlides[imgCounter].classList.remove('active');
+        imgCounter = (imgCounter + 1) % imgSlides.length;
+        imgSlides[imgCounter].classList.add('active');
       }
-    }
-    setInterval(cycleReviews, 5000);
+    }, 3000);
 
-    // Form Redirection Handler
-    document.getElementById('bookingForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const name = document.getElementById('guestName').value;
-      const count = document.getElementById('guestCount').value;
-      const location = document.getElementById('cafeLocation').value;
-      
-      const text = `Hello Cravery Cafe, I would like to check table availability.%0A%0A*Name:* ${name}%0A*Size:* ${count}%0A*Outlet:* ${location}`;
-      window.open('https://wa.me/917680069791?text=' + text, '_blank');
+    // Google Screenshots Loop Engine - Configured to 5 Seconds (5000ms)
+    let revCounter = 0;
+    const revSlides = document.querySelectorAll('.review-slide');
+    setInterval(() => {
+      if(revSlides.length > 0) {
+        revSlides[revCounter].classList.remove('visible');
+        revCounter = (revCounter + 1) % revSlides.length;
+        revSlides[revCounter].classList.add('visible');
+      }
+    }, 5000);
+
+    // Request Routing Redirection
+    document.getElementById('bookingDataForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const n = document.getElementById('nameInput').value;
+      const c = document.getElementById('countInput').value;
+      const l = document.getElementById('locInput').value;
+      const compiled = `Hello Cravery Cafe, I would like to check table availability.%0A%0A*Name:* ${n}%0A*Size:* ${c}%0A*Outlet:* ${l}`;
+      window.open(`https://wa.me/917680069791?text=${compiled}`, '_blank');
     });
   </script>
 </body>
 </html>
+
