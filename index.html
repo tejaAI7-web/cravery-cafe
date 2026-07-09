@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,13 +6,12 @@
   <title>Cravery Cafe | Where Cravings Meet Comfort</title>
   <style>
     :root {
-      --bg-midnight: #09090b;
-      --bg-panel-dark: #121214;
-      --bg-panel-light: #f4f4f5;
-      --accent-gold: #c69b7b;
-      --text-main: #ffffff;
+      --bg-light: #fafafa;
+      --bg-panel-dark: #1c261e;
+      --accent-sage: #4f6f52; /* Premium Matchao-inspired Sage Green */
       --text-dark: #18181b;
-      --text-muted: #a1a1aa;
+      --text-light: #ffffff;
+      --text-muted: #71717a;
     }
 
     * {
@@ -23,8 +22,8 @@
     }
 
     body {
-      background-color: var(--bg-midnight);
-      color: var(--text-main);
+      background-color: var(--bg-light);
+      color: var(--text-dark);
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
@@ -36,7 +35,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     .logo h1 {
@@ -47,33 +46,24 @@
     }
 
     .logo span {
-      color: var(--accent-gold);
+      color: var(--accent-sage);
     }
 
-    .nav-btn {
-      background: transparent;
-      color: var(--text-main);
-      border: 1px solid var(--accent-gold);
-      padding: 12px 28px;
-      text-decoration: none;
-      border-radius: 0;
-      font-size: 13px;
+    .demo-badge {
+      border: 1px solid var(--accent-sage);
+      color: var(--accent-sage);
+      padding: 10px 24px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       font-weight: 700;
-      transition: all 0.3s ease;
     }
 
-    .nav-btn:hover {
-      background: var(--accent-gold);
-      color: var(--bg-midnight);
-    }
-
-    /* True Desktop Grid Layout Container */
+    /* Split Screen Hero Layout: Fully Responsive Desktop and Mobile */
     .hero-section {
       max-width: 1300px;
       margin: 0 auto;
-      padding: 80px 20px;
+      padding: 60px 20px;
       display: grid;
       grid-template-columns: 1fr;
       gap: 60px;
@@ -88,14 +78,14 @@
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 3px;
-      color: var(--accent-gold);
+      color: var(--accent-sage);
       margin-bottom: 20px;
       display: block;
       font-weight: 700;
     }
 
     .hero-content h2 {
-      font-size: 48px;
+      font-size: 44px;
       font-weight: 900;
       line-height: 1.15;
       margin-bottom: 25px;
@@ -105,7 +95,7 @@
 
     .hero-content h2 span {
       display: block;
-      color: var(--accent-gold);
+      color: var(--accent-sage);
       font-style: italic;
       font-family: serif;
       text-transform: capitalize;
@@ -117,23 +107,10 @@
       font-size: 16px;
       font-family: 'Segoe UI', sans-serif;
       max-width: 500px;
-      margin: 0 auto 40px auto;
+      margin: 0 auto;
       line-height: 1.7;
     }
 
-    .hero-cta {
-      background: var(--accent-gold);
-      color: var(--bg-midnight);
-      padding: 18px 40px;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 800;
-      letter-spacing: 2px;
-      font-size: 13px;
-      transition: opacity 0.3s;
-    }
-
-    /* Premium Dynamic Image Frame with Modern Border Accents */
     .hero-display {
       display: flex;
       justify-content: center;
@@ -145,9 +122,10 @@
       width: 100%;
       max-width: 440px;
       aspect-ratio: 4 / 5;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(0,0,0,0.05);
       padding: 15px;
-      background: #0e0e10;
+      background: #ffffff;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.05);
     }
 
     .frame-wrapper::before {
@@ -157,8 +135,8 @@
       left: -10px;
       width: 40px;
       height: 40px;
-      border-top: 2px solid var(--accent-gold);
-      border-left: 2px solid var(--accent-gold);
+      border-top: 2px solid var(--accent-sage);
+      border-left: 2px solid var(--accent-sage);
     }
 
     .slideshow-box {
@@ -183,10 +161,10 @@
       opacity: 1;
     }
 
-    /* Elegant Asymmetrical Grid Sections */
+    /* Asymmetrical Content Grid Cards Section */
     .menu-section {
-      background: var(--bg-panel-light);
-      color: var(--text-dark);
+      background: var(--bg-panel-dark);
+      color: var(--text-light);
       padding: 100px 20px;
     }
 
@@ -207,9 +185,13 @@
       letter-spacing: 1px;
     }
 
+    .section-header h3 span {
+      color: var(--accent-sage);
+    }
+
     .section-header p {
       font-family: 'Segoe UI', sans-serif;
-      color: #71717a;
+      color: #a1a1aa;
       font-size: 15px;
       margin-top: 10px;
     }
@@ -221,15 +203,16 @@
     }
 
     .premium-card {
-      background: #ffffff;
+      background: #19221b;
+      border: 1px solid rgba(255,255,255,0.05);
       border-radius: 0;
       overflow: hidden;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .premium-card:hover {
       transform: translateY(-10px);
+      border-color: var(--accent-sage);
     }
 
     .card-img-box {
@@ -257,77 +240,16 @@
 
     .card-info p {
       font-family: 'Segoe UI', sans-serif;
-      color: #52525b;
+      color: #a1a1aa;
       font-size: 14px;
       line-height: 1.6;
     }
 
-    /* Premium Styled Form Module */
-    .form-section {
-      padding: 100px 20px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .booking-box {
-      background: var(--bg-panel-dark);
-      border: 1px solid #222225;
-      padding: 50px 40px;
-    }
-
-    .booking-box h3 {
-      font-size: 28px;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: 35px;
-      letter-spacing: 1px;
-    }
-
-    .input-field {
-      margin-bottom: 25px;
-    }
-
-    .input-field label {
-      display: block;
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--accent-gold);
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .input-field input, .input-field select {
-      width: 100%;
-      background: #1a1a1c;
-      border: 1px solid #2d2d32;
-      padding: 14px 18px;
-      color: #ffffff;
-      font-size: 14px;
-      font-family: 'Segoe UI', sans-serif;
-      outline: none;
-    }
-
-    .form-btn {
-      width: 100%;
-      background: var(--accent-gold);
-      color: var(--bg-midnight);
-      border: none;
-      padding: 18px;
-      font-size: 14px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-
-    /* Premium Real Google Review Image Carousel Display */
+    /* Google Reviews Screenshot Section Box */
     .reviews-section {
       padding: 100px 20px;
       text-align: center;
-      border-top: 1px solid #222225;
+      background: var(--bg-light);
     }
 
     .reviews-container {
@@ -335,16 +257,26 @@
       margin: 0 auto;
     }
 
+    .reviews-container .section-header h3 {
+      color: var(--text-dark);
+    }
+
+    .reviews-container .section-header p {
+      color: var(--accent-sage);
+      font-weight: 700;
+    }
+
     .review-viewport {
-      background: var(--bg-panel-dark);
-      border: 1px solid #222225;
-      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
       overflow: hidden;
-      min-height: 240px;
+      min-height: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 25px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.02);
     }
 
     .review-slide {
@@ -361,13 +293,14 @@
       height: auto;
       display: block;
       margin: 0 auto;
+      border-radius: 8px;
     }
 
     footer {
-      background: #050506;
+      background: #ffffff;
       padding: 60px 20px;
       font-family: 'Segoe UI', sans-serif;
-      border-top: 1px solid #222225;
+      border-top: 1px solid rgba(0,0,0,0.05);
     }
 
     .footer-content {
@@ -378,10 +311,10 @@
       line-height: 1.8;
     }
 
-    /* Premium Multi-Device Desktop Monitor Adjustments Media Query */
+    /* Responsive Desktop Framework Settings Query */
     @media (min-width: 992px) {
       .hero-section {
-        grid-template-columns: 1.2fr 1fr; /* Two columns side-by-side on computers */
+        grid-template-columns: 1.2fr 1fr;
         padding: 120px 20px;
       }
       .hero-content {
@@ -389,9 +322,6 @@
       }
       .hero-content h2 {
         font-size: 64px;
-      }
-      .hero-content p {
-        margin: 0 0 40px 0;
       }
       .frame-wrapper {
         max-width: 460px;
@@ -405,33 +335,34 @@
     <div class="logo">
       <h1>Cravery <span>Cafe</span></h1>
     </div>
-    <a href="#reserve" class="nav-btn">Book Table</a>
+    <div class="demo-badge">Demo Model</div>
   </header>
 
+  <!-- Clean Grid Layout Setup -->
   <section class="hero-section">
     <div class="hero-content">
-      <span class="hero-tag">Premium Comfort Hub</span>
+      <span class="hero-tag">Aesthetic Comfort Concept</span>
       <h2>Where Cravings Meet <span>Cozy Comfort</span></h2>
       <p>Indulge in a peaceful, aesthetic ambiance featuring premium brewed coffees, legendary mac and cheese, and artisan comfort savory creations.</p>
-      <a href="#reserve" class="hero-cta">Reserve a Space</a>
     </div>
 
     <div class="hero-display">
       <div class="frame-wrapper">
         <div class="slideshow-box" id="cafeSlides">
-          <img src="item1.jpg" class="active" alt="Mac and Cheese">
+          <img src="item1.jpg" class="active" alt="Mac and Cheese Display">
           <img src="item2.jpg" alt="Pulled Cheese Garlic Bread">
           <img src="item3.jpg" alt="Rich Hot Chocolate">
-          <img src="item4.jpg" alt="Steaming Cafe Vibe">
+          <img src="item4.jpg" alt="Steaming Coffee Pour Over">
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Dark-Mode Contrast Content Cards Layout Block -->
   <section class="menu-section">
     <div class="menu-container">
       <div class="section-header">
-        <h3>Signature Best-Sellers</h3>
+        <h3>Signature <span>Best-Sellers</span></h3>
         <p>A curated preview of our diners' absolute favorite delicacies</p>
       </div>
       
@@ -448,7 +379,7 @@
 
         <div class="premium-card">
           <div class="card-img-box">
-            <img src="item2.jpg" alt="Garlic Bread">
+            <img src="item2.jpg" alt="Garlic Bread Presentation">
           </div>
           <div class="card-info">
             <h4>Pulled Cheese Garlic Bread</h4>
@@ -458,7 +389,7 @@
 
         <div class="premium-card">
           <div class="card-img-box">
-            <img src="item3.jpg" alt="Belgian Hot Chocolate">
+            <img src="item3.jpg" alt="Belgian Hot Chocolate Melt">
           </div>
           <div class="card-info">
             <h4>Signature Hot Chocolate</h4>
@@ -469,39 +400,12 @@
     </div>
   </section>
 
-  <section class="form-section" id="reserve">
-    <div class="booking-box">
-      <h3>Book An Aesthetic Table</h3>
-      <form id="bookingDataForm">
-        <div class="input-field">
-          <label for="nameInput">Full Name</label>
-          <input type="text" id="nameInput" required placeholder="Enter your full name">
-        </div>
-        <div class="input-field">
-          <label for="countInput">Number of Guests</label>
-          <select id="countInput">
-            <option value="2 People">2 People (Cozy Corner)</option>
-            <option value="4 People">4 People (Standard Table)</option>
-            <option value="6+ People">6+ People (Group Celebration)</option>
-          </select>
-        </div>
-        <div class="input-field">
-          <label for="locInput">Preferred Outlet Location</label>
-          <select id="locInput">
-            <option value="Jubilee Hills">Jubilee Hills, Road No. 78</option>
-            <option value="Financial District">Financial District, Nanakramguda</option>
-          </select>
-        </div>
-        <button type="submit" class="form-btn">Request Table via WhatsApp</button>
-      </form>
-    </div>
-  </section>
-
+  <!-- Live Verified Screenshot Carousel Section Module -->
   <section class="reviews-section">
     <div class="reviews-container">
       <div class="section-header">
         <h3>Loved By Diners</h3>
-        <p class="rating-summary" style="color: var(--accent-gold);">★ 4.5 Stars (2,380+ Verified Google Reviews)</p>
+        <p>★ 4.5 Stars (2,380+ Verified Google Reviews)</p>
       </div>
 
       <div class="review-viewport">
@@ -529,7 +433,7 @@
 
   <footer>
     <div class="footer-content">
-      <p style="font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Cravery Cafe Hyderabad</p>
+      <p style="font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Cravery Cafe Hyderabad</p>
       <p>📍 Jubilee Hills: Plot 416A, Film Nagar, Phase III, Road No. 78, Hyderabad</p>
       <p>📍 Financial District: Level-1, The District, Mescape Road, Nanakramguda, Hyderabad</p>
       <p style="margin-top: 15px;">⏰ Timing: Open Daily from 11:00 AM to 1:00 AM Midnight</p>
@@ -537,17 +441,7 @@
   </footer>
 
   <script>
-    // Food Asset Rotator Engine - Configured to 3 Seconds (3000ms)
-    let imgIdx = 0;
-    const images = document.querySelectorAll('#cafeSlideshow img');
-    function slideImages() {
-      if(images.length > 0) {
-        images[cafeIndex].classList.remove('active');
-        cafeIndex = (cafeIndex + 1) % cafeImages.length;
-        cafeImages[cafeIndex].add ? cafeImages[cafeIndex].classList.add('active') : cafeImages[cafeIndex].classList.add('active');
-      }
-    }
-    // Fixed reference naming bugs
+    // Food Asset Rotator Engine - 3 Second Loop Timing
     let imgCounter = 0;
     const imgSlides = document.querySelectorAll('#cafeSlides img');
     setInterval(() => {
@@ -558,7 +452,7 @@
       }
     }, 3000);
 
-    // Google Screenshots Loop Engine - Configured to 5 Seconds (5000ms)
+    // Google Screenshots Loop Engine - 5 Second Loop Timing
     let revCounter = 0;
     const revSlides = document.querySelectorAll('.review-slide');
     setInterval(() => {
@@ -568,17 +462,8 @@
         revSlides[revCounter].classList.add('visible');
       }
     }, 5000);
-
-    // Request Routing Redirection
-    document.getElementById('bookingDataForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const n = document.getElementById('nameInput').value;
-      const c = document.getElementById('countInput').value;
-      const l = document.getElementById('locInput').value;
-      const compiled = `Hello Cravery Cafe, I would like to check table availability.%0A%0A*Name:* ${n}%0A*Size:* ${c}%0A*Outlet:* ${l}`;
-      window.open(`https://wa.me/917680069791?text=${compiled}`, '_blank');
-    });
   </script>
 </body>
 </html>
+
 
